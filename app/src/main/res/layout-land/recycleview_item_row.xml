@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/itemImageHeight"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="15dp"
+    >
+    <android.support.constraint.ConstraintLayout
+        android:background="@drawable/background_land"
+        android:id="@+id/constrainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="@+id/constrainLayout"
+            app:layout_constraintLeft_toLeftOf="@+id/constrainLayout"
+            android:id="@+id/imageView"
+            android:layout_width="155dp"
+            android:layout_height="247dp" />
+
+        <TextView
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:padding="10dp"
+            android:id="@+id/textViewName"
+            android:layout_width="550dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Movie Name"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toRightOf="@id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/constrainLayout" />
+
+        <TextView
+            android:textAlignment="center"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:id="@+id/textViewDesc"
+            android:layout_width="510dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Movie Name"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@id/imageView"
+            app:layout_constraintTop_toBottomOf="@id/textViewName" />
+
+        <ImageView
+            android:src="@drawable/ic_star_black_24dp"
+            app:layout_constraintRight_toRightOf="@id/constrainLayout"
+            app:layout_constraintBottom_toBottomOf="@id/constrainLayout"
+            android:id="@+id/hasTopRated"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
